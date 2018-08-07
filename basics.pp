@@ -4,11 +4,11 @@ exec { 'apt-update' :
   command => '/usr/bin/apt-get update'
 }
 
-host { 'puppet':
-  name => puppet
-  ensure => present
-  comment => sample entry untill dns is correct
-  ip => 178.128.185.7
+host { 'host entry puppet':
+  name => "puppet",
+  ensure => "present",
+  comment => "sample entry untill dns is correct",
+  ip => "178.128.185.7",
 }
 
 $packages =  ['git', 'iperf3', 'speedtest-cli', 'nuttcp', 'nmap', 'netcat']
