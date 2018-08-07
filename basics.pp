@@ -8,7 +8,7 @@ package { $packages:
   ensure => "installed"
 }
 
-include ntp
+#include ntp
 class { 'ntp':
   servers => [ '0.ubuntu.pool.ntp.org', '1.ubuntu.pool.ntp.org', 'tick.shastalink.k12.ca.us','tock.shastalink.k12.ca.us']
 }
