@@ -5,8 +5,8 @@ exec { 'apt-update' :
 }
 user { 'jalspach':
   ensure => present,
-  uid    => '1000',
-  gid    => '1000',
+  uid    => '1007',
+  gid    => '1007',
   shell  => '/bin/bash',
   home   => '/home/jalspach'
 }
