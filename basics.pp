@@ -1,4 +1,4 @@
-node '*' {
+node 'raspberrypi.shastalink.k12.ca.us' {
 
 exec { 'apt-update' :
   command => '/usr/bin/apt-get update'
