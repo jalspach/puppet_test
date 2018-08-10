@@ -1,5 +1,4 @@
 
-node 'default' {
 
   $packages =  ['git', 'iperf3', 'speedtest-cli', 'nuttcp', 'nmap', 'netcat']
   package { $packages:
@@ -22,6 +21,4 @@ file { '/usr/local/sbin/eesd-test_server.sh':
   ensure => link,
   target => '/home/pi/git/Site-Tester/server.sh',
   mode   => '0751',
-}
-
 }
