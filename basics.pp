@@ -30,11 +30,13 @@ vcsrepo { '/home/pi/git/Site-Tester/':
 file { '/usr/local/sbin/eesd-test.sh':
   ensure => link,
   target => '/home/pi/git/Site-Tester/eesd-test.sh',
+  mode => "0751",
 }
 
 file { '/usr/local/sbin/eesd-test_server.sh':
   ensure => link,
   target => '/home/pi/git/Site-Tester/server.sh',
+  mode => "0751",
 }
 
 # add puppet configs, default ssh keys (maybe not on a public git server though), git pull of testing script, correct ntp to local ntp servers, ping matric (use puppet.db to consolidate this info.)
