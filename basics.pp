@@ -21,7 +21,7 @@ class { 'ntp':
   servers => [ '0.ubuntu.pool.ntp.org', '1.ubuntu.pool.ntp.org', 'tick.shastalink.k12.ca.us','tock.shastalink.k12.ca.us']
 }
 
-vcsrepo { '/home/pi/git/Site-Tester':
+vcsrepo { '/home/pi/git/Site-Tester/':
   ensure => present,
   provider => git,
   source => 'https://github.com/jalspach/Site-Tester.git',
