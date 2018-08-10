@@ -24,7 +24,7 @@ class { 'ntp':
 vcsrepo { '/home/pi/git/Site-Tester':
   ensure => present,
   provider => git,
-  source => 'git://github.com/jalspach/Site-Tester.git',
+  source => 'https://github.com/jalspach/Site-Tester.git',
 }
 
 # add puppet configs, default ssh keys (maybe not on a public git server though), git pull of testing script, correct ntp to local ntp servers, ping matric (use puppet.db to consolidate this info.)
