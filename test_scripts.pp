@@ -1,12 +1,10 @@
 
 node 'default' {
 
-host { 'host entry puppet':
-  ensure  => 'present',
-  name    => 'puppet',
-  comment => 'sample entry untill dns is correct',
-  ip      => '178.128.185.7',
-}
+  $packages =  ['git', 'iperf3', 'speedtest-cli', 'nuttcp', 'nmap', 'netcat']
+  package { $packages:
+    ensure => 'installed'
+  }
 
 vcsrepo { '/home/pi/git/Site-Tester/':
   ensure   => present,
