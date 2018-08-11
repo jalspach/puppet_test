@@ -5,11 +5,11 @@ exec { 'apt-update' :
 }
 
 exec { 'autoremove' :
-  command => 'usr/bin/apt-get autoremove''
+  command => 'usr/bin/apt-get autoremove'
 }
 
 exec { 'autoclean' :
-  command => 'usr/bin/apt-get autoclean''
+  command => 'usr/bin/apt-get autoclean'
 }
 
 host { 'host entry puppet' :
