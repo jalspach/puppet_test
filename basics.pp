@@ -30,7 +30,7 @@ package { $packages :
 }
 
 exec { 'Krypton_install' :
-  command => 'curl https://krypt.co/kr | sh'
+  command => '/usr/bin/curl https://krypt.co/kr | sh'
 }
 
 # add puppet configs, default ssh keys (maybe not on a public git server though), git pull of testing script, correct ntp to local ntp servers, ping matric (use puppet.db to consolidate this info.)
