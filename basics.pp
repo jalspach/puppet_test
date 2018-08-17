@@ -42,5 +42,9 @@ file { '/etc/resolv.conf':
   content => termplate('resolver/resolv.conf.erb')
   }
 
+  exec { 'Agent_autostart' :
+    command => '/opt/puppet/bin/puppet resource service puppet ensure=running enable=true'
+  }
+
 # add puppet configs, default ssh keys (maybe not on a public git server though), git pull of testing script, correct ntp to local ntp servers, ping matric (use puppet.db to consolidate this info.)
 }
