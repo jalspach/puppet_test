@@ -16,7 +16,7 @@ host { 'host entry puppet' :
   ensure  => 'present',
   name    => 'puppet',
   comment => 'sample entry untill dns is correct',
-  ip      => '178.128.185.7',
+  ip      => '10.1.3.169',
 }
 
 #include and configure ntp
