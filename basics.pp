@@ -33,5 +33,14 @@ exec { 'Krypton_install' :
   command => '/usr/bin/curl https://krypt.co/kr | sh'
 }
 
+$nameservers = ['10.1.3.133', '10.0.128.133']
+file { '/etc/resolv.conf':
+  ensure => file,
+  owner => 'root',
+  group => 'root',
+  mode => '0644',
+  content => termplate('resolver/resolv.conf.erb')
+  }
+
 # add puppet configs, default ssh keys (maybe not on a public git server though), git pull of testing script, correct ntp to local ntp servers, ping matric (use puppet.db to consolidate this info.)
 }
