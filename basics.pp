@@ -39,7 +39,7 @@ file { '/etc/resolv.conf':
   owner => 'root',
   group => 'root',
   mode => '0644',
-  content => termplate('resolver/resolv.conf.erb')
+  content => termplate('resolver/templates/resolv.conf.erb')
   }
 
   exec { 'Agent_autostart' :
