@@ -6,7 +6,7 @@
   }
 
 vcsrepo { '/home/pi/git/Site-Tester/':
-  ensure   => present,
+  ensure   => latest, #WARNING - This overwrites any local changes to the repository.
   provider => git,
   source   => 'https://github.com/jalspach/Site-Tester.git',
 }
