@@ -14,8 +14,9 @@ exec { 'autoclean' :
 
 host { 'host entry puppet' :
   ensure  => 'present',
-  name    => 'puppet',
-  comment => 'sample entry untill dns is correct',
+  name    => 'puppet.shastalink.k12.ca.us',
+  host_aliases => 'puppet'
+  comment => 'Not necessary after name resalution is configured',
   ip      => '10.1.3.169',
 }
 
@@ -24,7 +25,7 @@ class { 'ntp' :
   servers => [ '0.ubuntu.pool.ntp.org', '1.ubuntu.pool.ntp.org', 'tick.shastalink.k12.ca.us','tock.shastalink.k12.ca.us']
 }
 
-$packages =  ['localepurge', 'curl']
+$packages =  ['localepurge', 'curl' ]
 package { $packages :
   ensure => 'installed'
 }
