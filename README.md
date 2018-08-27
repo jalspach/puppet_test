@@ -9,6 +9,7 @@ SOme things that could be added / corrected in this file are:
  - add users and ssh keys
  - set timezone and other locales
  - set boot type (watch output of rasberry-config script)
+ - configure the correct permissions on these files
 
 
  The initial steps to set up the raw devices are (this should be scripted):

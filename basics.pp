@@ -47,5 +47,8 @@ exec { 'Agent_autostart' :
   command => '/opt/puppet/bin/puppet resource service puppet ensure=running enable=true',
 }
 
+class { 'motd':
+  content => "This PI managed by puppet/n",
+  }
 # add puppet configs, default ssh keys, correct ntp to local ntp servers.
 }
