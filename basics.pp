@@ -55,7 +55,7 @@ exec { 'Agent_autostart' :
 
 include motd,
 class { 'motd':
-  content => 'This PI managed by puppet/n',
+  content => 'This Pi is managed by Puppet/n',
   }
 
 
