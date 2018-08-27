@@ -1,5 +1,5 @@
 node 'default' {
-
+  include ntp
 exec { 'apt-update' :
   command => '/usr/bin/apt-get update',
 }
@@ -16,11 +16,17 @@ host { 'host entry puppet server' :
   ensure       => 'present',
   name         => 'puppet.shastalink.k12.ca.us',
   host_aliases => 'puppet',
-  comment      => 'This is bootstrapped in the initial manual configuration. It is no longer necessary after name resalution is configured.',
+  comment      => 'Not necessary if name can resolve.',
   ip           => '10.1.3.169',
 }
 
+include timezone
+class {'timezone':
+  timezone => 'US/Pacific-New',
+}
+
 #include and configure ntp
+include ntp
 class { 'ntp' :
   servers => [ '0.ubuntu.pool.ntp.org', '1.ubuntu.pool.ntp.org', 'tick.shastalink.k12.ca.us','tock.shastalink.k12.ca.us'],
 }
@@ -48,7 +54,10 @@ exec { 'Agent_autostart' :
 }
 
 class { 'motd':
-  content => "This PI managed by puppet/n",
+  content => 'This PI managed by puppet/n',
   }
+
+
+
 # add puppet configs, default ssh keys, correct ntp to local ntp servers.
 }
