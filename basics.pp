@@ -53,6 +53,7 @@ exec { 'Agent_autostart' :
   command => '/opt/puppet/bin/puppet resource service puppet ensure=running enable=true',
 }
 
+include motd,
 class { 'motd':
   content => 'This PI managed by puppet/n',
   }
