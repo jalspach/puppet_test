@@ -14,13 +14,13 @@ exec { 'autoclean' :
 
 
 
-# host { 'host entry puppet server' :
-#   ensure       => 'present',
-#   name         => 'puppet.shastalink.k12.ca.us',
-#   host_aliases => 'puppet',
-#   comment      => 'Not necessary if the name can resolve.',
-#   ip           => '10.1.3.169',
-# }
+host { 'host entry puppet server' :
+  ensure       => 'present',
+  name         => 'puppet.shastalink.k12.ca.us',
+  host_aliases => 'puppet',
+  comment      => 'Not necessary if the name can resolve.',
+  ip           => '10.1.3.169',
+}
 #
 # include timezone,
 # class { 'timezone' :
