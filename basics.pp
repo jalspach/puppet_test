@@ -1,4 +1,4 @@
-node default {
+node 'rp0004.shastalink.k12.ca.us' {
 
 file { '/home/pi/puppettest.txt' :
   ensure  => present,
